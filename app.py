@@ -37,6 +37,23 @@ def bs_greeks_grid(S_grid, sigma_grid, K, T, r):
     gamma = norm.pdf(d1) / (S_grid * sigma * np.sqrt(T_safe))
     return {'Delta (call)': delta_call, 'Vega': vega, 'Gamma': gamma}
 
+
+linkedin_url = "https://www.linkedin.com/in/daniel-melkonyan-434522300/"  # Replace with your LinkedIn URL
+linkedin_icon_url = "https://cdn-icons-png.flaticon.com/24/174/174857.png"
+
+st.sidebar.markdown(
+    f"""
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom: 15px;">
+        <span>Created by -</span>
+        <a href="{linkedin_url}" target="_blank">
+            <img src="{linkedin_icon_url}" alt="LinkedIn" style="width:24px; height:24px;">
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # --- Sidebar inputs ---
 st.sidebar.header("Parameters")
 option_type = st.sidebar.radio("Option type", ('call', 'put'))
