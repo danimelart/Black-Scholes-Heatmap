@@ -1,6 +1,6 @@
-# Black–Scholes Heatmap
+# Black-Scholes Heatmap
 
-Interactive Streamlit app that visualizes European option prices (Black–Scholes) as a heatmap across stock price and volatility.
+Interactive Streamlit app that visualizes European option prices (Black-Scholes) as a heatmap across stock price and volatility.
 
 ## Run locally
 1. python -m venv .venv
@@ -12,4 +12,4 @@ Interactive Streamlit app that visualizes European option prices (Black–Schole
 Push to GitHub and deploy via Streamlit Community Cloud.
 
 ## Notes
-The model uses common Black–Scholes assumptions; see "About / Assumptions" in the app.
+The model uses common Black-Scholes assumptions; see "About / Assumptions" in the app.
