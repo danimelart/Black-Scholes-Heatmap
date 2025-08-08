@@ -22,7 +22,7 @@ def bs_price_grid(S_grid, sigma_grid, K, T, r, option_type='call'):
 
     if option_type == 'call':
         price = S_grid * norm.cdf(d1) - K * np.exp(-r * T_safe) * norm.cdf(d2)
-    else:  # put
+    else:  #Put
         price = K * np.exp(-r * T_safe) * norm.cdf(-d2) - S_grid * norm.cdf(-d1)
     return price
 
@@ -76,7 +76,7 @@ st.markdown("""
 This app computes European option prices using the Black–Scholes formula and plots an interactive heatmap.
 - **X axis:** Volatility (σ)
 - **Y axis:** Stock price (S)
-- **Color:** Option price (or selected Greek)
+- **Color:** Option price
 """)
 
 # create grid
