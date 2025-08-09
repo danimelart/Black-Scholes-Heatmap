@@ -1,4 +1,3 @@
-# app.py
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
@@ -7,7 +6,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Black–Scholes Heatmap", layout="wide")
 
-# --- Black-Scholes functions (vectorized) ---
+#Black-Scholes
 def bs_price_grid(S_grid, sigma_grid, K, T, r, option_type='call'):
     """
     S_grid, sigma_grid are numpy arrays (meshgrid). Returns price grid same shape.
@@ -54,8 +53,9 @@ st.sidebar.markdown(
 )
 
 
-# --- Sidebar inputs ---
+#Sidebar inputs
 st.sidebar.header("Parameters")
+
 option_type = st.sidebar.radio("Option type", ('call', 'put'))
 K = st.sidebar.number_input("Strike Price (K)", min_value=0.01, value=100.0, step=1.0)
 T = st.sidebar.slider("Time to expiration (years)", min_value=0.01, max_value=5.0, value=1.0, step=0.01)
@@ -70,7 +70,7 @@ n_sigma = st.sidebar.slider("Volatility grid points", 20, 200, 80)
 show_greeks = st.sidebar.checkbox("Show Greeks heatmap (Delta / Vega / Gamma)", value=False)
 download_csv = st.sidebar.checkbox("Enable CSV download", value=True)
 
-# --- Main layout ---
+#Main layout
 st.title("Interactive Black–Scholes Heatmap")
 st.markdown("""
 This app computes European option prices using the Black–Scholes formula and plots an interactive heatmap.
