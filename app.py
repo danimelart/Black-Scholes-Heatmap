@@ -116,7 +116,7 @@ if show_greeks:
             z=grid,
             x=sigma_vals,
             y=S_vals,
-            colorscale='Turbo',
+            colorscale='Viridis',
             colorbar=dict(title=name)
         ))
         fig.update_layout(title=f"{name} (K={K}, T={T}, r={r})", xaxis_title="σ", yaxis_title="S", height=400)
